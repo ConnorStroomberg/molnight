@@ -26,6 +26,10 @@ Molnight consists of a set of tests ( written using nightwatch ) that may be use
     - `nightwatch -t tests/hello-molgenis.js `
     - it should work, it works on my machine ...
 
+## backup and restore database state
+to create backup: `pg_dump --dbname molgenis -U molgenis -f nightwatch-backup.sql`
+to resore: `psql --dbname molgenis -U molgenis molgenis < nightwatch-backup.sql`    
+
 ## Running tests
 From project root type: `nightwatch`
 
