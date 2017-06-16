@@ -12,7 +12,7 @@
     "log_path" : "",
     "port" : 4444,
     "cli_args" : {
-      "webdriver.chrome.driver" : "",
+      "webdriver.chrome.driver" : "bin/chromedriver",
       "webdriver.gecko.driver" : "bin/geckodriver",
       "webdriver.edge.driver" : ""
     }
@@ -20,7 +20,28 @@
 
   "test_settings" : {
     "default" : {
-      "launch_url" : "http://localhost",
+      "launch_url" : "http://localhost:8080",
+      "selenium_port"  : 4444,
+      "selenium_host"  : "localhost",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "marionette": true,
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "chromeOptions": {
+               "args": [
+                   "window-size=1280,800"
+               ]
+           }
+      }
+    },
+    "molgenis01" : {
+      "launch_url" : "https://molgenis01.gcc.rug.nl",
       "selenium_port"  : 4444,
       "selenium_host"  : "localhost",
       "silent": true,
@@ -34,10 +55,10 @@
         "javascriptEnabled": true,
         "acceptSslCerts": true,
         "chromeOptions": {
-               "args": [
-                   "window-size=1280,800"
-               ]
-           }
+          "args": [
+            "window-size=1280,800"
+          ]
+        }
       }
     },
 
