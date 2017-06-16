@@ -8,7 +8,7 @@ export JETTY_TEST_PID=$!
 echo "Jetty running at "$JETTY_TEST_PID
 
 STARTED='not yet'
-while [[$STARTED != "Console reloading is ENABLED. Hit ENTER on the console to restart the context."]]
+while [$STARTED != "Console reloading is ENABLED. Hit ENTER on the console to restart the context."]]
 do
   echo --- sleeping for 5 seconds
   echo --- started is: $STARTED
