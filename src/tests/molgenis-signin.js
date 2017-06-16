@@ -1,4 +1,4 @@
-var login = require('./util/signin.js');
+var login = require('../util/signin.js');
 
 module.exports = {
   'Sign in molgenis test' : function (client) {
